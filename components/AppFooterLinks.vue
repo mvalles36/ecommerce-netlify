@@ -15,7 +15,14 @@
     </ul>
     <ul>
       <h4>Newsletter:</h4>
-      <input type="text" />
+      <form name="newsletter" netlify>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Sign Up</button>
+  </p>
+</form>
     </ul>
   </section>
 </template>
