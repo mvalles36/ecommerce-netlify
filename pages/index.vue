@@ -9,7 +9,7 @@
       <template v-slot:new>50%</template>
       <template v-slot:sale>Storewide Sale</template>
       <template v-slot:collection>Summer</template>
-      <template v-slot:details>All accessories</template>
+      <template v-slot:details>All Accessories</template>
     </app-textlockup>
     <app-featured-products />
   </div>
