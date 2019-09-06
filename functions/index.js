@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       headers,
       body: JSON.stringify({
-        status: "missing information"
+        status: "Missing Information"
       })
     }
   }
@@ -52,7 +52,7 @@ exports.handler = async (event, context) => {
               amount: data.stripeAmt,
               receipt_email: data.stripeEmail,
               customer: customer.id,
-              description: "Sample Charge"
+              description: "Allgo Premuim"
             },
             {
               idempotency_key: data.stripeIdempotency
@@ -67,7 +67,7 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       headers,
       body: JSON.stringify({
-        status: "it works! beep boop"
+        status: "It Works! Cha Ching!"
       })
     }
   } catch (err) {
