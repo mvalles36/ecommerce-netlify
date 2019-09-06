@@ -6,7 +6,7 @@
     </div>
     <div class="checkout">
       <h2 :class="{ active: cartUIStatus === 'idle' && cartCount > 0 }">02</h2>
-      <h4>Check out</h4>
+      <h4>Check Out</h4>
     </div>
     <div class="order">
       <h2 :class="{ active: cartUIStatus === 'success' }">03</h2>
