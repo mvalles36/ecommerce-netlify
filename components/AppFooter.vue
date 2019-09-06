@@ -1,7 +1,7 @@
 <template>
   <footer>
     <section class="callout">
-      <h2>"The surprising Styles of Allgo Are Advanced For All Seasons."</h2>
+      <h2>"The Surprising Styles of Allgo Are Advanced For All Seasons."</h2>
       <p>Michael Reddings</p>
     </section>
     <app-footer-links />
