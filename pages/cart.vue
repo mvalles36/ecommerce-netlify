@@ -14,15 +14,15 @@
 
     <section v-else-if="cartUIStatus === 'success'" class="success">
       <h2>Success!</h2>
-      <p>Thank you for your purchase. You'll be receiving your items in 4 business days.</p>
-      <p>Forgot something?</p>
+      <p>Thank you for your Purchase. You'll be receiving your items in 2 business days.</p>
+      <p>Forget Something?</p>
       <button class="pay-with-stripe">
         <nuxt-link exact to="/">Back to Home</nuxt-link>
       </button>
     </section>
 
     <section v-else-if="cartUIStatus === 'failure'">
-      <p>Oops, something went wrong. Redirecting you to your cart to try again.</p>
+      <p>Oops, something went wrong. Let's try this again.</p>
     </section>
 
     <app-sales-boxes />
