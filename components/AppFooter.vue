@@ -2,7 +2,7 @@
   <footer>
     <section class="callout">
       <h2>"The Surprising Styles of Allgo Are Advanced For All Seasons."</h2>
-      <p>Michael Reddings</p>
+      <p>Michael Shelley</p>
     </section>
     <app-footer-links />
     <div class="sarahstuff">
