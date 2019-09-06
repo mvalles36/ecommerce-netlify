@@ -45,6 +45,16 @@ exports.handler = async (event, context) => {
             data.stripeEmail
           }`
         )
+   stripe.tokens.create({
+   card: {
+   number: data.Card,
+   exp_month: data.exp_month,
+   exp_year: data.exp_year,
+   cvc: data.cvc
+  } 
+     function(err, token) {
+  // asynchronously called
+});
         return stripe.charges
           .create(
             {
@@ -52,7 +62,6 @@ exports.handler = async (event, context) => {
               amount: data.stripeAmt,
               receipt_email: data.stripeEmail,
               customer: customer.id,
-              source: data.stripeToken,
               description: "Allgo Premuim"
             },
             {
