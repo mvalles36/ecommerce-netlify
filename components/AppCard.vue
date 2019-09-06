@@ -27,9 +27,9 @@
 
     <div v-else class="statussubmit">
       <div v-if="cartUIStatus === 'failure'">
-        <h3>Oh No!</h3>
+        <h3>OH NO!</h3>
         <p>Something F!#%# Up!</p>
-        <button @click="clearCart">Please try again</button>
+        <button @click="clearCart">Please Try Again</button>
       </div>
 
       <div v-else-if="cartUIStatus === 'loading'" class="loadcontain">
@@ -68,6 +68,7 @@ export default {
     pay() {
       createToken().then(data => {
         const stripeData = { data, stripeEmail: this.stripeEmail };
+        const stripeData = { data, Card: this.Card };
         this.$store.dispatch("postStripeFunction", stripeData);
       });
     },
