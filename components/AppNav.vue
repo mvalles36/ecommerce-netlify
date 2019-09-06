@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Allgo</h1>
+    <h1>Allgo Vêtements</h1>
     <nav>
       <ul>
         <li>
