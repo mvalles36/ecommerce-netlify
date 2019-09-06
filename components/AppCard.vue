@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div v-if="cartUIStatus === 'idle'" class="payment">
-      <h3>Please enter your payment details:</h3>
+      <h3>Please Enter Your Payment Information:</h3>
       <label for="email">Email</label>
       <br />
       <input id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />
@@ -9,14 +9,12 @@
       <label for="card">Credit Card</label>
       <br />
       <small>
-        Test using this credit card:
-        <span class="cc-number">4242 4242 4242 4242</span>, and enter any 5 digits for the zip code
       </small>
       <card
         class="stripe-card"
         id="card"
         :class="{ complete }"
-        stripe="pk_test_5ThYi0UvX3xwoNdgxxxTxxrG"
+        stripe="pk_live_o9wuX7m3t4YeyzDRpV1sqTib002VMnqklN"
         :options="stripeOptions"
         @change="complete = $event.complete"
       />
@@ -30,13 +28,13 @@
     <div v-else class="statussubmit">
       <div v-if="cartUIStatus === 'failure'">
         <h3>Oh No!</h3>
-        <p>Something went wrong!</p>
+        <p>Something F!#%# Up!</p>
         <button @click="clearCart">Please try again</button>
       </div>
 
       <div v-else-if="cartUIStatus === 'loading'" class="loadcontain">
-        <h4>Please hold, we're filling up your cart with goodies</h4>
-        <p>Placeholder loader</p>
+        <h4>Please hold, we're filling your cart up with a bunch of good stuff</h4>
+        <p>Initiating the awesome!</p>
       </div>
 
       <div v-else-if="cartUIStatus === 'success'" class="loadcontain">
