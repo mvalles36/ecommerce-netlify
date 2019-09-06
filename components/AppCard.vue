@@ -46,9 +46,7 @@
  
 <script>
 import { Card, createToken } from "vue-stripe-elements-plus";
-
 import { mapState } from "vuex";
-
 export default {
   components: { Card },
   computed: {
@@ -68,7 +66,6 @@ export default {
     pay() {
       createToken().then(data => {
         const stripeData = { data, stripeEmail: this.stripeEmail };
-        const stripeData = { data, Card: this.Card };
         this.$store.dispatch("postStripeFunction", stripeData);
       });
     },
