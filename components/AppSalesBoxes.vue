@@ -16,17 +16,17 @@ export default {
         {
           icon: "/icon-package.svg",
           heading: "Free Shipping Globally",
-          details: "Delivery in 4 Days"
+          details: "Delivery within 2 Business Days"
         },
         {
           icon: "/icon-cal.svg",
           heading: "24/7 Customer Service",
-          details: "Call us any time"
+          details: "Call Us Any Time"
         },
         {
           icon: "/icon-service.svg",
           heading: "Easy Online Returns",
-          details: "Send Within 30 Days"
+          details: "30 Day Returns"
         }
       ]
     };
