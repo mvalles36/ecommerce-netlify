@@ -64,7 +64,7 @@ exports.handler = async (event, context) => {
               amount: data.stripeAmt,
               receipt_email: data.stripeEmail,
               customer: customer.id,
-              source: stripe.tokens.retrieve('stripeToken'),
+              source: "tok_visa",
               description: "Allgo Premuim"
             },
             {
