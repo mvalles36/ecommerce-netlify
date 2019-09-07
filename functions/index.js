@@ -27,21 +27,10 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       headers,
       body: JSON.stringify({
-        status: "Missing Information"
+        status: "missing information"
       })
     }
   }
-
-   const stripe.tokens.create({
-   card: {
-   number: data.Card,
-   exp_month: data.exp_month,
-   exp_year: data.exp_year,
-   cvc: data.cvc
-  } 
-     function(err, token) {
-  // asynchronously called
-});
 
   // stripe payment processing begins here
   try {
@@ -56,7 +45,6 @@ exports.handler = async (event, context) => {
             data.stripeEmail
           }`
         )
-      
         return stripe.charges
           .create(
             {
@@ -64,8 +52,7 @@ exports.handler = async (event, context) => {
               amount: data.stripeAmt,
               receipt_email: data.stripeEmail,
               customer: customer.id,
-              source: "tok_visa",
-              description: "Allgo Premuim"
+              description: "Allgo Charge"
             },
             {
               idempotency_key: data.stripeIdempotency
@@ -80,7 +67,7 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       headers,
       body: JSON.stringify({
-        status: "It Works! Cha Ching!"
+        status: "it works! beep boop"
       })
     }
   } catch (err) {
